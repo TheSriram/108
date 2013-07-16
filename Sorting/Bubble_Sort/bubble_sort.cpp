@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 	std::cout<<"\n Before Sorting \n";
 	for (i = 0; i < size; i++)
 	{
-		std::cout<<array[i];
+		std::cout<<array[i]<<" ";
 	}
 	for (i = 0; i < size; i++)
 	{
@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
 	std::cout<<"\n After Sorting \n";
 	for (i = 0; i < size; i++)
 	{
-		std::cout<<array[i];
+		std::cout<<array[i]<<" ";
 	}
 	return 0;
 }
