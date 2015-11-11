@@ -1,8 +1,8 @@
-def primenumberseive(n):
+import math
 
-    total_list = [i for i in range(2, n)]
+def primenumberseive(n):
     prime_list = [i for i in range(2, n)]
-    for i in range(2, int(math.sqrt(n))):
+    for i in range(2, int(math.ceil(math.sqrt(n)))):
         count = 0
         while ((i * i) + (i*(count))) <n:
             try:
