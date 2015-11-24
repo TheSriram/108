@@ -136,6 +136,24 @@ class BinarySearchTree(object):
         else:
             return (0, None, None)
 
+    def search_common_ancestor(self, data1, data2):
+        if self.data:
+            if self.data == data1:
+                return self.parent
+            elif self.data == data2:
+                return self.parent
+            elif self.data < data1 and self.data < data2:
+                if self.right:
+                    return self.right.search_common_ancestor(data1, data2)
+            elif self.data > data1 and self.data > data2:
+                if self.left:
+                    return self.left.search_common_ancestor(data1, data2)
+            else:
+                return self
+        else:
+            return None
+
+
     def level_order_traversal(self):
         orders = deque()
         bfs = []
@@ -182,7 +200,7 @@ def main():
     print root.common_ancestor(7,5)
     print root.level_order_traversal()
     print root.depth_order_traversal()
-
+    print root.search_common_ancestor(5,7)
 if __name__ == '__main__':
     main()
 
